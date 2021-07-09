@@ -4,7 +4,7 @@ body{
 header{
     margin: 0;
     width: 100%;
-    height: 15vh;
+    height: 15%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,7 +13,7 @@ header{
     transition: .2s;
     color: white;
     box-shadow: -1px 5px 20px 0px #00000014;
-    z-index: 2;
+    z-index: 5;
 }
 header div{
     display: flex;
@@ -31,7 +31,7 @@ header div:first-child img{
     width: 10%;
     height: 40%;
 }
-header div:last-child a{
+#social-media a{
     width: 5%;
     height: 30%;
     margin: 5px;
@@ -43,26 +43,55 @@ header div:last-child a{
     align-items: center;
     transition: .2s;
 }
-header div:last-child a:hover{
+#social-media a:hover{
     background: white;
     transform: scale(1.2);
     margin: 10px;
 }
-header div:last-child a:hover > img{
+#social-media a:hover > img{
     filter: invert(0);
 }
-header div:last-child img{
+#social-media img{
     width: 100%;
     height: 100%;
 }
+#social-media::before{
+    content: 'Contacto';
+    position: absolute;
+    left: 2%;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0%;
+}
+#dMenu{
+    opacity: 0%;
+}
+#dMenu img{
+    width: 90%;
+    height: 90%;
+}
+#dMenu{
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    width: 2.4em;
+    background-color: transparent;
+    color: white;
+    height: 2.4em;
+    font-weight: bold;
+    margin: 2%;
+}
 .init{
-    background-color: #f3a4ac
+    background-color: #f1afaf
 }
 .vanish{
     background-color: transparent;
     color: white;
 }
-header div:last-child img{
+#social-media img{
     filter: invert(1);
 }
 header h1{
@@ -95,7 +124,7 @@ header h1{
 #IP{
     padding: 2%;
     background-color: #f1afaf;
-    font-size: 1.7em;
+    font-size: 130%;
     border-radius: 20px;
 }
 #pricing{
@@ -122,11 +151,13 @@ header h1{
     text-align: center;
     overflow: hidden;
     padding-top: 0%;
+    min-width: 320px;
 }
 
 .range:hover{
     transform: scale(1.1);
     filter: brightness(100%);
+    z-index: 1;
 }
 .range:hover > figure img{
     transform: scale(1.2);
@@ -212,4 +243,105 @@ footer h2{
 .contact-buttons a img{
     height: 100%;
     width: 100%;
+}
+
+/* ---------------------------------------------------- Responsive ---------------------------------------------------- */
+
+@media only screen and (max-width: 600px){
+    .range{
+        width: 90%;
+        min-width: 200px;
+        height: 400px;
+    }
+    #dMenu{
+        display: flex;
+        z-index: 2;
+        transition: .2s;
+        opacity: 100%; 
+    }
+    .dMP{
+        transform: rotate(0deg);
+    }
+    .dMD{
+        transform: rotate(180deg);
+    }
+    #social-media{
+        position: absolute;
+        width: 100%;
+        justify-content: flex-end;
+        height: 100%;
+        background: #f1afaf;
+        margin: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.37);
+        z-index: 0;
+        transition: .2s;
+    }
+    #social-media a{
+        width: 1.5em
+    }
+    #social-media::before{
+        opacity: 100%;
+    }
+    .smHide{
+        opacity: 0%;
+        top: -100%;
+    }
+    .smShow{
+        opacity: 100%;
+        top: 15vh;
+    }
+    .c-footer h2{
+        font-size: 1em;
+        text-align: center;
+        margin: 12%;
+    }
+}
+@media only screen and (max-width: 390px){
+    .range{
+        width: 90%;
+        min-width: 200px;
+        height: 400px;
+    }
+    #dMenu{
+        display: flex;
+        z-index: 2;
+        transition: .2s;
+        opacity: 100%; 
+    }
+    .dMP{
+        transform: rotate(0deg);
+    }
+    .dMD{
+        transform: rotate(180deg);
+    }
+    #social-media{
+        position: absolute;
+        width: 100%;
+        justify-content: center;
+        height: 100%;
+        background: #f1afaf;
+        margin: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.37);
+        z-index: 0;
+        transition: .2s;
+    }
+    #social-media a{
+        width: 1.5em
+    }
+    #social-media::before{
+        opacity: 0%;
+    }
+    .smHide{
+        opacity: 0%;
+        top: -100%;
+    }
+    .smShow{
+        opacity: 100%;
+        top: 15vh;
+    }
+    .c-footer h2{
+        font-size: 1em;
+        text-align: center;
+        margin: 12%;
+    }
 }
