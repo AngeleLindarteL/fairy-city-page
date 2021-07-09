@@ -1,0 +1,184 @@
+body{
+    font-family: 'Yomogi', 'cursive';
+}
+header{
+    margin: 0;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    position: fixed;
+    transition: .2s;
+    color: white;
+    box-shadow: -1px 5px 20px 0px #00000014;
+    z-index: 2;
+}
+header div{
+    display: flex;
+    align-items: center;
+    margin: 2%;
+    width: 50%;
+}
+header div:first-child{
+    justify-content: flex-start;
+}
+header div:last-child{
+    justify-content: flex-end;
+}
+header div:first-child img{
+    width: 10%;
+    height: 40%;
+}
+header div:last-child a{
+    width: 5%;
+    height: 30%;
+    margin: 5px;
+    border-radius: 50%;
+    border: 3px solid white;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s;
+}
+header div:last-child a:hover{
+    background: white;
+    transform: scale(1.2);
+    margin: 10px;
+}
+header div:last-child a:hover > img{
+    filter: invert(0);
+}
+header div:last-child img{
+    width: 100%;
+    height: 100%;
+}
+.init{
+    background-color: rgb(224, 142, 224);
+}
+.vanish{
+    background-color: transparent;
+    color: white;
+}
+header div:last-child img{
+    filter: invert(1);
+}
+header h1{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: bold;
+    font-size: 35px;
+    margin: 0;
+}
+#welcome{
+    background-image: url(/img/mine.jpg);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#welcome article{
+    background: rgba(0, 0, 0, 0.699);
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#IP{
+    padding: 2%;
+    background-color: black;
+    font-size: 1.7em;
+    border-radius: 20px;
+}
+#pricing{
+    height:fit-content;
+    background: url(/img/fondo.jpg);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5% 1%;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.range{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 2% 1%;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    transition: .2s;
+    filter: brightness(70%);
+    text-align: center;
+    overflow: hidden;
+    padding-top: 0%;
+}
+
+.range:hover{
+    transform: scale(1.1);
+    filter: brightness(100%);
+}
+.range:hover > figure img{
+    transform: scale(1.2);
+}
+.range figure{
+    width: 100%;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.range figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 0;
+    margin: 0;
+    transition: .2s;
+}
+.range p{
+    margin: 0;
+    margin-top: 12px;
+    font-size: 1.5em;
+}
+.range a{
+    padding: 2% 4%;
+    color: black;
+    background: white;
+    margin: 4% 0%;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 20px;
+    transition: .2s;
+}
+
+.range a:hover{
+    background: rgb(224, 142, 224);
+    color: white;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: white;
+    padding: 10px
+}
+footer h6{
+    font-size: 1.4em;
+    margin: 2px;
+}
